@@ -1,6 +1,5 @@
 package org.jenkinsci.plugins.vstest_runner;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
