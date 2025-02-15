@@ -14,7 +14,7 @@ import hudson.tools.ToolInstallation;
 import jenkins.model.Jenkins;
 import net.sf.json.JSONObject;
 import org.kohsuke.stapler.DataBoundConstructor;
-import org.kohsuke.stapler.StaplerRequest;
+import org.kohsuke.stapler.StaplerRequest2;
 
 import java.io.File;
 import java.io.IOException;
@@ -129,7 +129,7 @@ public class VsTestInstallation extends ToolInstallation implements NodeSpecific
         }
 
         @Override
-        public boolean configure(StaplerRequest req, JSONObject json) {
+        public boolean configure(StaplerRequest2 req, JSONObject json) {
             setInstallations(req.bindJSONToList(VsTestInstallation.class, json.get("tool"))
                     .toArray((VsTestInstallation[]) Array.newInstance(VsTestInstallation.class, 0)));
             save();
